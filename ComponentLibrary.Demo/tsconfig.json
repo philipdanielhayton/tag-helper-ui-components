@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "module": "es2020",
+    "lib": ["es2020", "DOM"],
+    "target": "es2020",
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "allowJs": true,
+    "checkJs": true,
+    "noEmit": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "paths": {
+      "$lib": ["assets/lib"],
+      "$lib/*": ["assets/lib/*"]
+    }
+  },
+  "include": ["assets/**/*.d.ts", "assets/**/*.ts"]
+}

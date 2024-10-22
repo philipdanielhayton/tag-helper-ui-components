@@ -1,0 +1,44 @@
+﻿@using ComponentLibrary.Demo.TagHelpers
+@{
+	Layout = "../_rootLayout.cshtml";
+}
+
+<ui-container>
+	<ui-carousel loop="true">
+		<div class="max-w-screen-sm mx-auto overflow-hidden rounded-2xl">
+			<ui-carousel-container class="gap-x-1">
+				@for (var i = 0; i < 5; i++)
+				{
+					<ui-carousel-item class="basis-full">
+						<div class="aspect-video bg-black text-white flex items-center justify-center">
+							@(i)
+						</div>
+					</ui-carousel-item>
+				}
+			</ui-carousel-container>
+		</div>
+		
+		<ui-button onclick:carousel:prev>
+            Prev
+        </ui-button>
+		
+		<ui-button onclick:carousel:next>
+            Next
+        </ui-button>
+	
+	</ui-carousel>
+	
+	<hr />
+	
+	<ui-button>
+		Default
+	</ui-button>
+	
+	<ui-button variant="Primary">
+		Primary
+	</ui-button>
+	
+	<ui-button class='bg-red-500'>
+    	Custom
+    </ui-button>
+</ui-container>

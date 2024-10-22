@@ -1,0 +1,7 @@
+.htmx-indicator {
+  @apply pointer-events-none opacity-0 duration-100 ease-out;
+
+  &.htmx-request {
+    @apply opacity-100;
+  }
+}

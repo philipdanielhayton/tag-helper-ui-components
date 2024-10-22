@@ -1,0 +1,28 @@
+﻿@using System.Threading
+@{
+	Layout = null;
+    var lang = Thread.CurrentThread.CurrentCulture.Name;
+}
+
+<!doctype html>
+<html lang="@(lang)">
+<head>
+    <meta charset="utf-8" />
+    
+    <environment exclude="Development">
+        <link rel="stylesheet" asp-href-include="~/assets/main.*.css">
+    </environment>
+</head>
+<body x-data>
+
+@RenderBody()
+
+<environment include="Development">
+    <script type="module" defer src="@("/@vite/client")"></script>
+    <script type="module" defer src="~/assets/main.ts"></script>
+</environment>
+<environment exclude="Development">
+    <script type="module" defer asp-src-include="~/assets/main.*.js"></script>
+</environment>
+</body>
+</html>
